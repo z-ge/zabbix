@@ -7,7 +7,7 @@ import sys
 
 if len(sys.argv) < 2:
     print("Usage: %s web_url" % sys.argv[0])
-    print("example: ./check_httpcode_status.py http://www.baidu.com")
+    print("example: %s http://www.baidu.com" % sys.argv[0])
     sys.exit(1)
 
 weburl = sys.argv[1]
