@@ -13,7 +13,7 @@ if len(sys.argv) < 2:
 weburl = sys.argv[1]
 http = urllib3.PoolManager(cert_reqs='CERT_REQUIRED',ca_certs=certifi.where())
 try:
-    r = http.request('GET',weburl,retries=2)
+    r = http.request('GET',weburl,retries=2,timeout=6.0)
 except urllib3.exceptions.HTTPError:
     print('Connection failed.')
 else:
